@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+    <title>脳トレーニング（四文字熟語）</title>
+    <script type="text/javascript" charset="utf-8">
+        var fHalf = new Array("文武", "疑心", "悪戦", "九夏", "意志", "奮励", "酒池");
+        var sHalf = new Array("両道", "暗鬼", "苦闘", "三伏", "堅固", "努力", "肉林");
+        function getRandom(){
+            return Math.floor(Math.random() * fHalf.length);
+        }
+    </script>
+</head>
+<body>
+    <h1>脳トレーニング（四文字熟語）</h1>
+
+    <script type="text/javascript" charset="utf-8">
+        var numOfQ = 5;
+        var num;
+        var correct = 0;
+
+        for (var i=0; i<numOfQ; i++){
+            num = getRandom();
+            msg = fHalf[num] + " ?";
+            ans = prompt(msg, "");
+            if (ans == sHalf[num]) correct++;
+        }
+
+        document.write("<h1>正解率：", Math.round(correct/numOfQ * 100), " %</h1>");
+        document.write("<p>", numOfQ, "問中", correct, "問正解", "</p>");
+    </script>
+</body>
+</html>

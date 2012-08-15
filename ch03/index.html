@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" charset="utf-8">
+        function getRandom(){
+            return Math.floor(Math.random()*100);
+        }
+	</script>
+	<title>脳トレーニング</title>
+</head>
+<body>
+<h1>脳トレーニング（足し算）</h1>
+    <script type="text/javascript" charset="utf-8">
+        var numOfQ = 5;
+        var num1, num2, num3;
+        var correct= 0;
+        for (var i=0; i<numOfQ; i++) {
+            num1 = getRandom();
+            num2 = getRandom();
+            msg = num1 + " + " + num2 + " = ";
+            ans = prompt(msg, "");
+            if (ans == (num1 + num2)) correct++;
+        }
+        document.write("<h1>正解率：", Math.round(correct/numOfQ * 100), "%</h1>");
+        document.write("<p>", numOfQ, "問中 ", correct, "問正解", "</p>");
+
+    </script>
+
+</body>
+</html>
